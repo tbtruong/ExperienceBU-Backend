@@ -1,0 +1,82 @@
+[
+    {"model": "events.Event",
+    "fields": {
+        "eventID":"1234",
+        "eventName":"Event 1",
+        "content": "Description Needed",
+        "eventAffiliation": "BU VSA",
+        "eventLocation": "CAS 320",
+        "eventType": "General Meeeting",
+        "eventTags": "Entertainment, History",
+        "contact_info": "ryli1998@bu.edu",
+        "alreadyHappened": true,
+        "banner": "default.jpg"
+    }
+
+}, {"model": "events.Event",
+    "fields": {
+        "eventID":"12345",
+        "eventName":"Event 2",
+        "content": "Description Needed",
+        "eventAffiliation": "BU VSA",
+        "eventLocation": "CAS 320",
+        "eventType": "General Meeeting",
+        "eventTags": "Entertainment, History",
+        "contact_info": "ryli1998@bu.edu",
+        "alreadyHappened": true,
+        "banner": "default.jpg"
+    }
+
+},{"model": "events.Event",
+    "fields": {
+        "eventID":"123456",
+        "eventName":"Event 3",
+        "content": "Description Needed",
+        "eventAffiliation": "BU VSA",
+        "eventLocation": "CAS 320",
+        "eventType": "General Meeeting",
+        "eventTags": "Entertainment, History",
+        "contact_info": "ryli1998@bu.edu",
+        "alreadyHappened": true,
+        "banner": "default.jpg"
+    }
+
+},{
+    "model": "organizations.Club",
+    "fields":{
+        "clubId":"123",
+        "clubName": "Club 1",
+        "clubPicture": "default.jpg",
+        "clubDescription": "No description",
+        
+        "clubLocation": "EMA 302",
+        "clubPersonOfContact": "Alpha Beta",
+        "clubTags": "Chinese, English, Dancing"
+    }
+},{
+    "model": "organizations.Club",
+    "fields":{
+        "clubId":"1234",
+        "clubName": "Club 2",
+        "clubPicture": "default.jpg",
+        "clubDescription": "No description",
+        
+        "clubLocation": "EMA 302",
+        "clubPersonOfContact": "Alpha Beta",
+        "clubTags": "Chinese, English, Dancing"
+    }
+},{
+    "model": "organizations.Club",
+    "fields":{
+        "clubId":"12345",
+        "clubName": "Club 3",
+        "clubPicture": "default.jpg",
+        "clubDescription": "No description",
+        
+        "clubLocation": "EMA 302",
+        "clubPersonOfContact": "Alpha Beta",
+        "clubTags": "Chinese, English, Dancing"
+    }
+}
+
+]
