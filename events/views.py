@@ -6,5 +6,5 @@ from .models import Event
 
 
 def show_events(request):
-
     request_instance = Event.objects.create()
+
