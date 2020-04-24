@@ -1,0 +1,64 @@
+[
+    {"model": "organizations.Club", "fields":
+        {
+            "id": 0,
+            "name": "Habitat for Humanity",
+            "picture": "https://drive.google.com/file/d/1C0jHqB_ygRo4HSe7o49xs1uNtvmT3kV5/view?usp=sharing",
+            "description": "Our Boston University Campus Chapter works with local affiliates in the Greater Boston area and with the larger Habitat for Humanity community in order to help fight the battle against the foreclosure crisis in Massachusetts. Founded in 1995, our chapter regularly holds build trips across the state, donating our time and labor during weekends in hopes of helping families desperate for affordable housing. Group meetings and various fundraisers are held throughout the school year as special programs are planned every semester to raise awareness of our cause. In addition, we annually send a group of twenty student volunteers to the South on a Collegiate Challenge program during the week of Spring Break.",
+            "requirements": "Anyone is welcome! Habitat for Humanity at Boston University continues to grow, and we're proud to offer a number of ways you can be involved in our chapter. Whether you choose to swing by a meeting, sign up for a build trip or donate, your concern and consideration is appreciated tremendously.",
+            "eboard": "President: John Batoha; Vice President: Lauren Harwood; Secretary: Meghan Downey; Treasurer: John Dixon; Fundraising Chair: Katie Durand; PR Chair: Pat Nelson; Trip Coordinator: Marshall Schurtz; Spring Break Coordinator: Lynn Lim; Webmaster: Kanta Sangchuntr",
+            "time": "Tuesdays, 17:00-18:00",
+            "location": "CAS Room 235",
+            "contact": "bu.habitatboston@gmail.com",
+            "tags": "Community Service"      
+        }},
+        {"model": "organizations.Club", "fields":{
+            "id": 1,
+            "name": "New Music Choir",
+            "picture": "https://drive.google.com/file/d/1147MvIo_Y3S-VgID-JpCy75YvnRTfcP7/view?usp=sharing",
+            "description": "The New Music Choir of Boston University is committed to serving the musical interests of the University’s students, faculty, and artists. Our task is to bring the new music of Boston University to life by rehearsing and performing said music and if the composer so wishes, may have guest composers to interpret and teach music. The New Music Choir is dedicated and open to all BU students, faculty, and the Boston community",
+            "requirements": "The membership of the New Music Choir of Boston University, hereby referred to as NMC, is non-commital but participation in concerts is subject to the judgment of NMC President, Vice-President, Secretary, and treasurer",
+            "eboard": "President: Joseph Sedarski; Vice President: Jayna Meyer; Secretary: Anna Riggins; Treasurer: Emily Fetter; PR Coordinator: Spencer Klein",
+            "time": "Sunday, 4:30-5:30 PM",
+            "location": "CFA Basement Room B26A",
+            "contact": "newmusic@bu.edu",
+            "tags": "Performance Arts - Music"      
+        }},
+        {"model": "organizations.Club", "fields":{
+            "id": 2,
+            "name": "Music Business Club",
+            "picture": "https://drive.google.com/file/d/170uPSAQei3xJ2RY0RYt891I-8bZi-hmw/view?usp=sharing",
+            "description": "MBC is a professional organization created to foster a hands-on experience of the music industry for students aspiring to enter into this field. It consists of two dynamic committees that seek to encompass all aspects of the music industry from finding talent, developing their brand, and creating events that showcase their music. It has been very successful in the past and hopes to continue to excel as we grow as a group and add more artists of all genres and musical styles. We combine both worlds of music and business together in order for aspiring entrepreneurs of the music world to get a taste of what it is like to manage and coordinate an artist and his or her talent. This organization was founded by several BU business students of varying grades, who have a passion for music and wanted to be a part of the promotional and managing process of the industry. With that in mind, we decided to formulate a community of our own within the university for all students with a similar passion to come together and help each other learn and develop their skills in this field. So far, we have been successful in reaching out to local artists in the area and developing our own brand and voice on and off campus. We are proud and excited for the past events and accomplishments we have made and for what is to come. Music is what brings people together, whether you’re the artist, the fan, the marketer, the manager, the photographer and more. Music is a sanctuary for people to escape and just enjoy the sounds with people who share a similar interest. This is why we love music and why we choose to be a part of sharing it to everyone. MBC, a collaboration between music and business.",
+            "requirements": "If interested in applying as a member of one of our committees, click: https://docs.google.com/forms/d/e/1FAIpQLScnKJzNJeWaxScOe-r8cF0IhsCsIhtjjbrNLQjsgOhB519zjw/viewform?c=0&w=1; If interested in applying as a represented artist, click: https://drive.google.com/open?id=11Brd2YZU3s6bv3CTK-aW2D-2GgzP9e58gb8Lug0fMMo",
+            "eboard": "Tamara Soueidan ~ President/Artist Management; Kaajal Patel ~ Vice President/Events Management; Eman Khazra ~ Secretary/Artist Management; Bianca Tocco ~ Treasurer/Artist Management ",
+            "time": "Fridays, 7-8 PM",
+            "location": "CAS 323",
+            "contact": "mbceboard@gmail.com",
+            "tags": "Music, Academic & Professional - Others"      
+        }},
+        {"model": "organizations.Club", "fields":{
+            "id": 3,
+            "name": "Fusion",
+            "picture": "https://drive.google.com/file/d/1mrEhSQfn8JK8DYb-ZZQKeD5hx7_0vyU-/view?usp=sharing",
+            "description": "Established in 1993, Fusion is one of Boston University's urban dance troupes. Comprised of approximately 20 talented BU students, Fusion acts as a source of creative expression and personal growth through dance. Fusion provides a space for its members, members of the BU community, and beyond to grow and learn as dancers through consistent training and various performance opportunities. By constantly encouraging ingenuity, originality, and a sense of community, Fusion fosters lasting relationships between strong and versatile dancers.",
+            "requirements": "Attendance Rehearsals: All rehearsals are mandatory for all members ",
+            "eboard": "President: Alexis Danielle Saez; Vice President: Tanashua Harris Santiago; Secretary: Jayda Bonnick; Treasurer: Katherine Lewis",
+            "time": "Tuesdays 7-8 PM, Saturdays 1-3 PM",
+            "location": "CFA Basement Room 305",
+            "contact": "fusion@bu.edu",
+            "tags": "Performance Arts - Dance"      
+        }},
+        {"model": "organizations.Club", "fields":{
+            "id": 4,
+            "name": "Ad Club",
+            "picture": "https://drive.google.com/file/d/1V5nOJWFb7HsX7QKy7CY0-ADSxqrpQ_bS/view?usp=sharing",
+            "description": "AdClub is an official college chapter of the American Advertising Federation. Its functions range from a social organization to meet students to gaining professional contacts in the advertising industry. AdClub also produces BU’s official entry into the National Student Advertising Competition (NSAC), an annual contest among more than 150 colleges and universities. Through this club students can better understand the functions and values of advertising, develop their individual skills, learn about job openings and scholarships, and keep up with industry trends. Members also act as an agency, producing advertising for other organizations on campus. AdClub meets weekly and strives to unite its students through the common interest of advertising.",
+            "requirements": "Open to those who want to create, regardless of experience. Sign up here: https://docs.google.com/spreadsheets/d/1eERNEbcQB06gzhh7mhH3WOCtGHmi5XMBYHfajvlglWE/edit#gid=0. Our Varsity team creates real, portfolio-building work for Boston University clients and startups. It is our elite team that continues to build our reputation within the Boston network. Apply here: https://docs.google.com/forms/d/e/1FAIpQLSfZcV1wVuSkE4g22f3zOWjchTkrfAzKX9O2GZk8G5z6EZhIxQ/closedform",
+            "eboard": "Becca Buchholz | President | COM 2020 | Advertising/Statistical Methods; Emily Wisner | VP of Management | COM 2020 | Advertising/Psychology; Gabby Rohland | VP of Creative | COM 2020 | Advertising/History; Cheryl Chen | VP of Social | COM & CAS 2021 | Advertising & Psychology; MK Moore | Copywriting Supervisor | COM 2020 | Advertising",
+            "time": "Mondays, 6-7 PM",
+            "location": "COM 211",
+            "contact": "boston.university.adclub@gmail.com",
+            "tags": "Academic & Professional - Others, Media Arts"      
+        }}
+    
+]

@@ -14,13 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.contrib.auth import views as auth_views
 from userAccount import views as user_views
+from django.conf import urls
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
-#from django.contrib.auth.views import logout
+from events import views as event_views
+from organizations import views as club_views
+
+# from django.contrib.auth.views import logout
 
 
 urlpatterns = [
@@ -30,7 +34,14 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='userAccount/logout.html'), name='logout'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('googlelogin/',TemplateView.as_view(template_name = 'userAccount/googlelogin.html')),
+    path('googlelogin/', TemplateView.as_view(template_name='userAccount/googlelogin.html')),
+    re_path(r'^api/events/$', event_views.show_events),
+    re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.event_info),
+    re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.events_detail),
+    re_path(r'^api/organizations/$', club_views.show_clubs),
+    re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
+    re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
+
 ]
 
 # urlpatterns += staticfiles_urlpatterns()

@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6682134e-e750-4c7a-a984-ce01b2ed7f9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/events/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homepage/templates/login/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userAccount/templates/userAccount/googlelogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/organizations/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/credentials.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experienceBU/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experienceBU/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAccount/templates/userAccount/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/userAccount/templates/userAccount/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organizations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organizations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/testdata.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +43,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/emptyIdleness/events/urls.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/organizations" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ryan Li\PycharmProjects\experienceBU\organizations" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />

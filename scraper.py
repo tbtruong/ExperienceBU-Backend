@@ -9,6 +9,8 @@ uClient = uReq(my_url)
 raw_data = uClient.read()
 uClient.close()
 
+selector = 'div > h3 ~ div'
+
 page_soup = soup(raw_data,"html.parser")
 
 #event_list = page_soup.findAll("div",{"class":"event-list"})
