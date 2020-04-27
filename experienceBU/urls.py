@@ -24,6 +24,7 @@ from django.views.generic import TemplateView
 from events import views as event_views
 from organizations import views as club_views
 from django.conf import settings
+
 # from django.contrib.auth.views import logout
 
 
@@ -43,4 +44,4 @@ urlpatterns = [
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
 
 ]
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

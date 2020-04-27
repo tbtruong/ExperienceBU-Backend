@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6682134e-e750-4c7a-a984-ce01b2ed7f9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/userAccount/schedule.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_events.json" beforeDir="false" afterPath="$PROJECT_DIR$/db_events.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0002_auto_20200415_2230.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0003_auto_20200418_0119.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0004_auto_20200418_0120.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0005_auto_20200418_0131.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0006_auto_20200418_0136.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0007_auto_20200422_1438.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0008_auto_20200422_1522.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0009_auto_20200422_1553.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/migrations/0010_event_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experienceBU/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experienceBU/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0002_auto_20200418_1622.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0003_auto_20200418_1626.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0004_remove_club_clubmeetingtime.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0005_auto_20200422_1438.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0006_auto_20200422_1553.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/migrations/0007_auto_20200422_1628.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/organizations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAccount/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/userAccount/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAccount/migrations/0002_auto_20200413_0240.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAccount/migrations/0003_profile_email.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAccount/migrations/0004_delete_account.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/userAccount/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/userAccount/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
