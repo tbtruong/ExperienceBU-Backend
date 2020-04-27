@@ -5,7 +5,7 @@ from .serializers import *
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
-
+from organizations.models import Club
 
 # from userAccount import Account as user
 # Create your views here.
@@ -34,7 +34,6 @@ def show_events(request):
 def event_info(request,pk):
     if request.method == 'GET':
         data = Event.objects.get(pk=pk)
-
         serializer = EventSerializer(data, context={'request': request})
         return Response(serializer.data)
 

@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6682134e-e750-4c7a-a984-ce01b2ed7f9c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_events.json" beforeDir="false" afterPath="$PROJECT_DIR$/db_events.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experienceBU/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organizations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,26 +110,27 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1587255525497">
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1587964617397">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1587255525497" />
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom" timestamp="1587940181822">
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1587964617397" />
+    <state width="1899" height="150" key="GridCell.Tab.0.bottom" timestamp="1587964636405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587940181822" />
-    <state width="1899" height="295" key="GridCell.Tab.0.center" timestamp="1587940181822">
+    <state width="1899" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
+    <state width="1899" height="150" key="GridCell.Tab.0.center" timestamp="1587964636405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587940181822" />
-    <state width="1899" height="295" key="GridCell.Tab.0.left" timestamp="1587940181822">
+    <state width="1899" height="150" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
+    <state width="1899" height="150" key="GridCell.Tab.0.left" timestamp="1587964636405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587940181822" />
-    <state width="1899" height="295" key="GridCell.Tab.0.right" timestamp="1587940181822">
+    <state width="1899" height="150" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
+    <state width="1899" height="150" key="GridCell.Tab.0.right" timestamp="1587964636405">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587940181822" />
+    <state width="1899" height="150" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1587004183387">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

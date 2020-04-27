@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
+#from events.models import Event
 from PIL import Image
+
 
 # from django.contrib.auth.models import User
 # from userAccount.models import Account as User
@@ -30,6 +32,7 @@ class Club(models.Model):
     location = models.TextField(default="CAS 211")
     contact = models.TextField(default="busmashbrosociety@gmail.com")
     tags = models.TextField(default="No Tags")
+    #event_list = models.ForeignKey("events.Event", on_delete=models.CASCADE, related_name='clubs',default=)
 
     def save(self):
         super().save()

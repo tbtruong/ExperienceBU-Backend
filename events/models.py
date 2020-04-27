@@ -1,17 +1,15 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-
+from organizations.models import Club
 
 from PIL import Image
 
 
-
 class Event(models.Model):
-
     id = models.IntegerField(default=0, primary_key=True, unique=True)
     name = models.CharField(max_length=120, default='Untitled')  # length of title
-    affiliation = models.CharField(max_length=30, default="None")
+    affiliation = models.TextField(default="No Affiliation")
     picture = models.ImageField(default='default.jpg', upload_to='event_banner', blank=True)
     description = models.TextField(default="Description Needed")  # info about event
     date = models.TextField(default="March 20, 2018")
@@ -20,6 +18,7 @@ class Event(models.Model):
     type = models.TextField(max_length=20, default="GENERAL_MEETING")
     tags = models.TextField(default="No Tags")
     contact = models.EmailField(verbose_name='email', max_length=60, default=False)
+    affiliation_id = models.ForeignKey(to=Club, related_name='Events', on_delete=models.CASCADE, default=999)
 
     def save(self):
         super().save()
