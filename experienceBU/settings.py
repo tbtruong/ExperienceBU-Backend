@@ -93,13 +93,13 @@ WSGI_APPLICATION = 'experienceBU.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # sqlite3
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': "experiencebu_db",
-        'USER': 'root',
-        'PASSWORD': 'emptyIdleness$3',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',  # sqlite3
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     #   'NAME': "experiencebu_db",
+     #   'USER': 'root',
+     #   'PASSWORD': 'emptyIdleness$3',
+     #   'HOST': 'localhost',
+     #   'PORT': '3306',
     }
 }
 
