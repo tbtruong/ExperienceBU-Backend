@@ -2,18 +2,24 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import User
 from PIL import Image
-
+from events.models import Event
+from organizations.models import Club
 # from django_mysql.models import ListCharField
 # Create your models here.
-""""""
+#from django_mysql.models import JSONField
 
 
 class Profile(models.Model):
+    id = models.IntegerField(default=0,primary_key=True,unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(verbose_name="email", max_length=60, default=False)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
+    subscriptions = models.ManyToManyField(Club)
+    events = models.ManyToManyField(Event)
+    #schedule = JSONField()
+    tags = models.TextField(default="No Tags")
 
     def __str__(self):
         return f'{self.user.username} Profile'
@@ -27,6 +33,7 @@ class Profile(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+
 
 """
 class AccountManager(BaseUserManager):

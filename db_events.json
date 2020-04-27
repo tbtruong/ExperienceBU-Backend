@@ -1,5 +1,5 @@
 [
-    {"model": "events.Event",  "fields":
+    {"model": "events.Event", "fields":
         {
             "id": 0,
             "name": "Valentine's Day Bake Sale",
@@ -14,7 +14,7 @@
             "contact": "bu.habitatboston@gmail.com"      
         }
     },
-        {"model": "events.Event",  "fields":{
+        {"model": "events.Event", "fields":{
             "id": 1,
             "name": "Peach Pit Early Listening",
             "affiliation": "Music Business Club",
@@ -47,7 +47,7 @@
             "name": "Ad Club First Meeting of Semester",
             "affiliation": "Ad Club",
             "picture": "https://drive.google.com/open?id=1cLwA6E4l_AovTR9ZrWJlDh8AMGGy21dR",
-            "description": "See you then! Get excited for what we have planned this semester 🤩",
+            "description": "See you then! Get excited for what we have planned this semester ",
             "date": "January 28th",
             "time": "6-7 PM",
             "location": "SCI Room 117",
@@ -55,7 +55,7 @@
             "tags": "Academic & Professional - Others, Media Arts",
             "contact": "boston.university.adclub@gmail.com"      
         }},
-        {"model": "events.Event",  "fields":{
+        {"model": "events.Event", "fields":{
             "id": 4,
             "name": "(Online) Redstone Film Festival Awards Ceremony",
             "affiliation": "COM, The Redstone Foundation",

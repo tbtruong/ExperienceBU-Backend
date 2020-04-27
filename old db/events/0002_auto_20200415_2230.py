@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='event',
             name='author',
-            field=models.ForeignKey(default='Unknown', on_delete=django.db.models.deletion.CASCADE, to='userAccount.Account'),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='userAccount.Account'),
         ),
     ]

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -92,8 +93,13 @@ WSGI_APPLICATION = 'experienceBU.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',  # sqlite3
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': "experiencebu_db",
+        'USER': 'root',
+        'PASSWORD': 'emptyIdleness$3',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -137,8 +143,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
