@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -44,6 +43,7 @@ INSTALLED_APPS = [
     'organizations',
     'social_django',
     'rest_framework',
+    'django_filters',
     'corsheaders',
     'allauth',
     'allauth.account',
@@ -51,6 +51,11 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -94,12 +99,12 @@ WSGI_APPLICATION = 'experienceBU.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  # sqlite3
-         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'NAME': "experiencebu_db",
-        #'USER': 'root',
-        #'PASSWORD': 'emptyIdleness$3',
-        #'HOST': 'localhost',
-        #'PORT': '3306',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME': "experiencebu_db",
+        # 'USER': 'root',
+        # 'PASSWORD': 'emptyIdleness$3',
+        # 'HOST': 'localhost',
+        # 'PORT': '3306',
     }
 }
 

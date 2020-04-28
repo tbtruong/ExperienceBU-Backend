@@ -39,6 +39,7 @@ urlpatterns = [
     re_path(r'^api/events/$', event_views.show_events),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.event_info),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.events_detail),
+    re_path(r'^api/events/by/(?P<connection>\w+)/$', event_views.ClubEvents.as_view()),
     re_path(r'^api/organizations/$', club_views.show_clubs),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),

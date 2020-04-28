@@ -5,32 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/Fusion_ Elements XX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/Fusion__Elements_XX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/ad_club_first_meeting.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/ad_club_first_meeting_u9k5ruq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/ad_club_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/fusion_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/fusion_logo_8w1vvOP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/habitat_for_humanity_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/music_business_club_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/peach_pit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/peach_pit_cweKrtX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/redstone_film_festival.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/redstone_film_festival_EW1YfD3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/redstone_film_festival_VeqB0uC.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/event_banner/valentine_days_bake_sale.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/ad_club_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/ad_club_logo_aVEKI1R.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/fusion_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/fusion_logo_efNPsHy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/habitat_for_humanity_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/habitat_for_humanity_logo_G9gR6n6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/music_business_club_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/music_business_club_logo_D67pq5T.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/new_music_choir_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/organization_banner/new_music_choir_logo_Rv5cpIQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizations/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/events/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experienceBU/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experienceBU/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/experienceBU/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

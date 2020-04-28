@@ -18,13 +18,12 @@ class Event(models.Model):
     type = models.TextField(max_length=20, default="GENERAL_MEETING")
     tags = models.TextField(default="No Tags")
     contact = models.EmailField(verbose_name='email', max_length=60, default=False)
-    affiliation_id = models.ForeignKey(to=Club, related_name='Events', on_delete=models.CASCADE, default=999)
+    connection = models.ForeignKey(to=Club, related_name='Events', on_delete=models.CASCADE, default=999)
 
     def save(self):
         super().save()
 
         img = Image.open(self.picture.path)
-
 
         img.save(self.picture.path)
 

@@ -10,4 +10,4 @@ class EventSerializer(serializers.ModelSerializer):
         fields = (
             "id", "name", "affiliation", "picture", "description", "date", "time", "location", "type", "tags",
             "contact",
-            "affiliation_id")
+            "connection")
