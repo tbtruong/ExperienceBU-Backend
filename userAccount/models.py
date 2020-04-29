@@ -4,21 +4,23 @@ from django.contrib.auth.models import User
 from PIL import Image
 from events.models import Event
 from organizations.models import Club
+
+
 # from django_mysql.models import ListCharField
 # Create your models here.
-#from django_mysql.models import JSONField
+# from django_mysql.models import JSONField
 
 
 class Profile(models.Model):
-    id = models.IntegerField(default=0,primary_key=True,unique=True)
+    id = models.IntegerField(default=0, primary_key=True, unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(verbose_name="email", max_length=60, default=False)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    subscriptions = models.ManyToManyField(Club)
-    events = models.ManyToManyField(Event)
-    #schedule = JSONField()
+    subscriptions = models.ManyToManyField(Club, related_name="subscribedClubs", blank=True)
+    events = models.ManyToManyField(Event, related_name="favoriteEvents", blank=True)
+    # schedule = JSONField(default = '')
     tags = models.TextField(default="No Tags")
 
     def __str__(self):
@@ -35,7 +37,7 @@ class Profile(models.Model):
             img.save(self.image.path)
 
 
-"""
+
 class AccountManager(BaseUserManager):
     def createUser(self, email, username, password=None):
         if not email:
@@ -66,11 +68,6 @@ class AccountManager(BaseUserManager):
 class Account(AbstractBaseUser):
     email = models.EmailField(verbose_name="email", max_length=60, unique=True)
     userName = models.CharField(max_length=60, unique=True)
-    # schedule
-    school = models.CharField(max_length=3)
-    graduationYear = models.IntegerField()
-    # achievements
-    tags = models
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -89,4 +86,4 @@ class Account(AbstractBaseUser):
 
     def has_module_permissions(self, app_label):
         return True
-"""
+
