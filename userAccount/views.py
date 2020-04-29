@@ -2,6 +2,13 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from rest_framework import viewsets, status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from . import models, serializers, permissions
+from rest_framework.authentication import TokenAuthentication
+
 
 def register(request):
     if request.method == 'POST':
@@ -14,6 +21,37 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request, 'userAccount/register.html', {'form': form})
+
+
+# class AccountViewSet(viewsets.ModelViewSet):
+
+class UserProfileViewSet(viewsets.ModelViewSet):
+    """Creating, viewing, and updating Profiles"""
+    serializer_class = serializers.ProfileSerializer
+    queryset = models.Profile.objects.all()
+    # authentication_classes = TokenAuthentication
+    # permission_classes = (permissions)
+
+
+@login_required
+@api_view(['GET', 'POST'])
+def show_profiles(request):
+    # request_instance = Event.objects.create()
+    if request.method == 'GET':
+        data = models.Profile.objects.all()
+
+        serializer = serializers.ProfileSerializer(data, context={'request': request}, many=True)
+
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = serializers.ProfileSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @login_required

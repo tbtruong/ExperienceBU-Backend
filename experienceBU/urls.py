@@ -23,8 +23,13 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
 from events import views as event_views
 from organizations import views as club_views
+from userAccount import views as user_views
 from django.conf import settings
 
+from rest_framework.routers import DefaultRouter
+
+# router = DefaultRouter()
+# router.register('profile', user_views.UserProfileViewSet)
 # from django.contrib.auth.views import logout
 
 
@@ -43,6 +48,6 @@ urlpatterns = [
     re_path(r'^api/organizations/$', club_views.show_clubs),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
-
+    re_path(r'^api/profile/$', user_views.show_profiles)
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

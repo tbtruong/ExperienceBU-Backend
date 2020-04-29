@@ -37,7 +37,7 @@ class Profile(models.Model):
             img.save(self.image.path)
 
 
-
+"""
 class AccountManager(BaseUserManager):
     def createUser(self, email, username, password=None):
         if not email:
@@ -67,7 +67,7 @@ class AccountManager(BaseUserManager):
 
 class Account(AbstractBaseUser):
     email = models.EmailField(verbose_name="email", max_length=60, unique=True)
-    userName = models.CharField(max_length=60, unique=True)
+    #userName = models.CharField(max_length=60, unique=True)
     is_admin = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
@@ -86,4 +86,4 @@ class Account(AbstractBaseUser):
 
     def has_module_permissions(self, app_label):
         return True
-
+"""
