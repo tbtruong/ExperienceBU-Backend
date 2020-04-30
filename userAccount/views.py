@@ -6,7 +6,11 @@ from rest_framework import viewsets, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth.models import User, BaseUserManager
+from django.contrib.auth.hashers import make_password
 from . import models, serializers, permissions
+import requests, json
 from rest_framework.authentication import TokenAuthentication
 
 
@@ -31,6 +35,35 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = models.Profile.objects.all()
     # authentication_classes = TokenAuthentication
     # permission_classes = (permissions)
+
+
+class GoogleView(APIView):
+    def post(self, request):
+        payload = {'access_token': request.data.get("token")}  # validate the token
+        r = requests.get('https://www.googleapis.com/oauth2/v2/userinfo', params=payload)
+        data = json.loads(r.text)
+
+        if 'error' in data:
+            content = {'message': 'wrong google token / this google token is already expired.'}
+            return Response(content)
+
+        # create user if not exist
+        try:
+            user = User.objects.get(email=data['email'])
+        except User.DoesNotExist:
+            user = User()
+            user.username = data['email']
+            # provider random default password
+            user.password = make_password(BaseUserManager().make_random_password())
+            user.email = data['email']
+            user.save()
+
+        token = RefreshToken.for_user(user)  # generate token without username & password
+        response = {}
+        response['username'] = user.username
+        response['access_token'] = str(token.access_token)
+        response['refresh_token'] = str(token)
+        return Response(response)
 
 
 @login_required

@@ -41,6 +41,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('googlelogin/', TemplateView.as_view(template_name='userAccount/googlelogin.html')),
+    path('google/', user_views.GoogleView.as_view(), name='google'),
     re_path(r'^api/events/$', event_views.show_events),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.event_info),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.events_detail),
@@ -49,5 +50,6 @@ urlpatterns = [
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
     re_path(r'^api/profile/$', user_views.show_profiles)
+
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
