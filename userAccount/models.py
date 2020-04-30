@@ -5,8 +5,8 @@ from PIL import Image
 from events.models import Event
 from organizations.models import Club
 import jsonfield
-
-
+from django.contrib import admin
+from oauth2client.contrib.django_util.models import CredentialsField
 # from django_mysql.models import ListCharField
 # Create your models here.
 # from django_mysql.models import JSONField
@@ -16,6 +16,7 @@ class Profile(models.Model):
     id = models.IntegerField(default=0, primary_key=True, unique=True)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(verbose_name="email", max_length=60, default=False)
+    credentials = CredentialsField()
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -40,6 +41,9 @@ class Profile(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
+
+class CredentialsAdmin(admin.ModelAdmin):
+    pass
 
 """
 class AccountManager(BaseUserManager):

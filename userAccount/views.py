@@ -10,8 +10,24 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User, BaseUserManager
 from django.contrib.auth.hashers import make_password
 from . import models, serializers, permissions
-import requests, json
+from experienceBU import settings
+import requests, json, oauth2client
+import httplib2
+from googleapiclient.discovery import build
+from django.http import HttpResponseBadRequest
+from django.http import HttpResponseRedirect
+from oauth2client.contrib import xsrfutil
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.contrib.django_util.storage import DjangoORMStorage
+
+from httplib2 import Http
 from rest_framework.authentication import TokenAuthentication
+
+FLOW = oauth2client.client.flow_from_clientsecrets(
+    settings.GOOGLE_OAUTH2_CLIENT_SECRETS_JSON,
+    scope='https://www.googleapis.com/auth/gmail.readonly',
+    redirect_uri='http://127.0.0.1:8000/oauth2callback',
+    prompt='consent')
 
 
 def register(request):
@@ -35,6 +51,25 @@ class UserProfileViewSet(viewsets.ModelViewSet):
     queryset = models.Profile.objects.all()
     # authentication_classes = TokenAuthentication
     # permission_classes = (permissions)
+
+
+def gmail_authenticate(request):
+    storage = DjangoORMStorage(models.Profile, 'id', request.user, 'credential')
+    credential = storage.get()
+
+    if credential is None or credential.invalid:
+        FLOW.params['state'] = xsrfutil.generate_token(settings.SECRET_KEY,
+                                                       request.user)
+        authorize_url = FLOW.step1_get_authorize_url()
+        return HttpResponseRedirect(authorize_url)
+    else:
+        http = httplib2.Http()
+        http = credential.authorize(http)
+        service = build('gmail', 'v1', http=http)
+        print('access_token = ', credential.access_token)
+        status = True
+
+        return render(request, 'index.html', {'status': status})
 
 
 class GoogleView(APIView):
@@ -65,8 +100,19 @@ class GoogleView(APIView):
         response['refresh_token'] = str(token)
         return Response(response)
 
+def auth_return(request):
+    get_state = bytes(request.GET.get('state'), 'utf8')
+    if not xsrfutil.validate_token(settings.SECRET_KEY, get_state,
+                                   request.user):
+        return HttpResponseBadRequest()
+    credential = FLOW.step2_exchange(request.GET.get('code'))
+    storage = DjangoORMStorage(models.Profile, 'id', request.user, 'credential')
+    storage.put(credential)
+    print("access_token: %s" % credential.access_token)
+    return HttpResponseRedirect("/")
 
-@login_required
+
+#@login_required
 @api_view(['GET', 'POST'])
 def show_profiles(request):
     # request_instance = Event.objects.create()
@@ -74,7 +120,7 @@ def show_profiles(request):
         data = models.Profile.objects.all()
 
         serializer = serializers.ProfileSerializer(data, context={'request': request}, many=True)
-
+        print("request received! request received!")
         return Response(serializer.data)
 
     elif request.method == 'POST':

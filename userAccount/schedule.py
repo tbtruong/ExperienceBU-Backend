@@ -5,7 +5,7 @@ import json
 
 scopes = ['https://www.googleapis.com/auth/calendar']
 
-flow = InstalledAppFlow.from_client_secrets_file("credentials_old.json", scopes=scopes)
+flow = InstalledAppFlow.from_client_secrets_file("credentials_new.json", scopes=scopes)
 
 credentials = flow.run_console()
 

@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+import oauth2client
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'oauth2client',
 
 ]
 REST_FRAMEWORK = {
@@ -162,6 +163,13 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "545236115133-92efvfr2i30dc8n3701jsoh4b7h7ftj3.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'v8EKwWZNcaFi_FVFrvNNiVzG'
+
+GOOGLE_OAUTH2_CLIENT_ID = "545236115133-92efvfr2i30dc8n3701jsoh4b7h7ftj3.apps.googleusercontent.com"
+GOOGLE_OAUTH2_CLIENT_SECRET = 'v8EKwWZNcaFi_FVFrvNNiVzG'
+GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = 'client_secrets.json'
+
+
+
 # LOGIN_URL = 'login'
 LOGIN_URL = '/auth/login/google-oauth2/'
 
