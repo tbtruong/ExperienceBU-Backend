@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from PIL import Image
 from events.models import Event
 from organizations.models import Club
+import jsonfield
 
 
 # from django_mysql.models import ListCharField
@@ -20,7 +21,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=20)
     subscriptions = models.ManyToManyField(Club, related_name="subscribedClubs", blank=True)
     events = models.ManyToManyField(Event, related_name="favoriteEvents", blank=True)
-    # schedule = JSONField(default = '')
+    schedule = jsonfield.JSONField(default={})
     tags = models.TextField(default="No Tags")
 
     def __str__(self):
