@@ -1,0 +1,92 @@
+[
+    {"model": "events.Event",
+    "fields": {
+        "id":1,
+        "name":"Event 1",
+        "affiliation": "BU VSA",
+        "picture": "default.jpg",
+        "description": "Description Needed",
+        "time": "12:00:00",
+        "location": "CAS 320",
+        "type": "General Meeeting",
+        "tags": "Entertainment, History",
+        "contact": "ryli1998@bu.edu"
+        
+    }
+
+}, {"model": "events.Event",
+    "fields": {
+        "id":2,
+        "name":"Event 2",
+        "affiliation": "BU VSA",
+        "picture": "default.jpg",
+        "description": "Description Needed",
+        "time": "12:00:00",
+        "location": "CAS 320",
+        "type": "General Meeeting",
+        "tags": "Entertainment, History",
+        "contact": "ryli1998@bu.edu"
+        
+    }
+
+},{"model": "events.Event",
+    "fields": {
+        "id":3,
+        "name":"Event 3",
+        "affiliation": "BU VSA",
+        "picture": "default.jpg",
+        "description": "Description Needed",
+        "time": "12:00:00",
+        "location": "CAS 320",
+        "type": "General Meeeting",
+        "tags": "Entertainment, History",
+        "contact": "ryli1998@bu.edu"
+        
+    }
+
+},{
+    "model": "organizations.Club",
+    "fields":{
+        "id": 1,
+        "name": "Club 1",
+        "picture": "default.jpg",
+        "description": "Check out this description!",
+        "requirements": "No requirements",
+        "eboard": "Nobody",
+        "time":"12:00:00",
+        "location": "EMA 405",
+        "contact": "Alpha Beta",
+        "tags": "Chinese, English, Dancing"
+    }
+},{
+    
+        "model": "organizations.Club",
+        "fields":{
+            "id": 2,
+            "name": "Club 2",
+            "picture": "default.jpg",
+            "description": "Check out this description!",
+            "requirements": "No requirements",
+            "eboard": "Nobody",
+            "time":"13:00:00",
+            "location": "EMA 405",
+            "contact": "Alpha Beta",
+            "tags": "Chinese, English, Dancing"
+        }
+    },
+        {
+            "model": "organizations.Club",
+            "fields":{
+                "id": 3,
+                "name": "Club 3",
+                "picture": "default.jpg",
+                "description": "Check out this description!",
+                "requirements": "No requirements",
+                "eboard": "Nobody",
+                "time":"15:00:00",
+                "location": "EMA 405",
+                "contact": "Alpha Beta",
+                "tags": "Chinese, English, Dancing"
+            }
+        }
+]
