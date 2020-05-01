@@ -16,3 +16,12 @@ class ProfileSerializer(serializers.ModelSerializer):
         user = models.Profile(email=validated_data['email'], name=validated_data['name'])
         user.save()
     """
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.User
+
+        fields = (
+            "id", "username"
+        )

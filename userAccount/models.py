@@ -7,21 +7,23 @@ from organizations.models import Club
 import jsonfield
 from django.contrib import admin
 from oauth2client.contrib.django_util.models import CredentialsField
+
+
 # from django_mysql.models import ListCharField
 # Create your models here.
 # from django_mysql.models import JSONField
 
 
 class Profile(models.Model):
-    id = models.IntegerField(default=0, primary_key=True, unique=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    id = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
+    # user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(verbose_name="email", max_length=60, default=False)
     credentials = CredentialsField()
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     year = models.IntegerField(default=2020)
-    major = models.CharField(max_length=255,default="Undeclared")
+    major = models.CharField(max_length=255, default="Undeclared")
     introduction = models.TextField(default="None")
     subscriptions = models.ManyToManyField(Club, related_name="subscribedClubs", blank=True)
     events = models.ManyToManyField(Event, related_name="favoriteEvents", blank=True)
@@ -44,6 +46,7 @@ class Profile(models.Model):
 
 class CredentialsAdmin(admin.ModelAdmin):
     pass
+
 
 """
 class AccountManager(BaseUserManager):

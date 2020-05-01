@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import oauth2client
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'homepage',
     'userAccount',
     'organizations',
+    'oauth2_provider',
+    'rest_framework_social_oauth2',
     'social_django',
     'rest_framework',
     'django_filters',
@@ -49,14 +52,19 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'oauth2client',
 
 ]
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
+    # 'DEFAULT_AUTHENTICATION_CLASSES': [
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100
 }
@@ -85,6 +93,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -93,7 +103,13 @@ TEMPLATES = [
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
-    'social_core.backends.google.GoogleOAuth2',)
+    'rest_framework_social_oauth2.backends.DjangoOAuth2',
+    'social_core.backends.google.GoogleOAuth2',
+    )
+
+for key in ['GOOGLE_OAUTH2_KEY',
+            'GOOGLE_OAUTH2_SECRET', ]:
+    exec("SOCIAL_AUTH_{key} = os.environ.get('{key}', '')".format(key=key))
 
 WSGI_APPLICATION = 'experienceBU.wsgi.application'
 
@@ -161,17 +177,38 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/manage/'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile']
+
+SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
+
+SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
+
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "545236115133-92efvfr2i30dc8n3701jsoh4b7h7ftj3.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'v8EKwWZNcaFi_FVFrvNNiVzG'
 
-GOOGLE_OAUTH2_CLIENT_ID = "545236115133-92efvfr2i30dc8n3701jsoh4b7h7ftj3.apps.googleusercontent.com"
-GOOGLE_OAUTH2_CLIENT_SECRET = 'v8EKwWZNcaFi_FVFrvNNiVzG'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['https://www.googleapis.com/auth/calendar.events.readonly']
+
+DRFSO2_PROPRIETARY_BACKEND_NAME = "Google"
+
+# GOOGLE_OAUTH2_CLIENT_ID = "545236115133-92efvfr2i30dc8n3701jsoh4b7h7ftj3.apps.googleusercontent.com"
+# GOOGLE_OAUTH2_CLIENT_SECRET = 'v8EKwWZNcaFi_FVFrvNNiVzG'
 GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = 'client_secrets.json'
 
-
-
 # LOGIN_URL = 'login'
-LOGIN_URL = '/auth/login/google-oauth2/'
+# LOGIN_URL = '/auth/login/google-oauth2/'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.social_auth.associate_by_email',  # <- this line not included by default
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)

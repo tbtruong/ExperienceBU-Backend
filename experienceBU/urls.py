@@ -18,6 +18,7 @@ from django.urls import path, include, re_path
 from django.contrib.auth import views as auth_views
 from userAccount import views as user_views
 from django.conf import urls
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
@@ -42,6 +43,11 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('googlelogin/', TemplateView.as_view(template_name='userAccount/googlelogin.html')),
     path('google/', user_views.GoogleView.as_view(), name='google'),
+    # url(r'^gmailAuthenticate', user_views.gmail_authenticate, name='gmail_authenticate'),
+    # url(r'^oauth2callback', user_views.auth_return),
+    # url(r'^$', user_views.home, name='home'),
+    # url('', include('social_django.urls', namespace='social')),
+    re_path(r'^auth/', include('rest_framework_social_oauth2.urls')),
     re_path(r'^api/events/$', event_views.show_events),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.event_info),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.events_detail),
@@ -49,7 +55,9 @@ urlpatterns = [
     re_path(r'^api/organizations/$', club_views.show_clubs),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
-    re_path(r'^api/profile/$', user_views.show_profiles)
+    re_path(r'^api/profile/$', user_views.show_profiles),
+    # url(r'auth-social/', include('social_django.urls', namespace='social'),
+    #    TemplateView.as_view(template_name='userAccount/googlelogin.html'))
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

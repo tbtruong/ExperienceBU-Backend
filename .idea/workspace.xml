@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -29,15 +29,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../foodproject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ryan Li\PycharmProjects\experienceBU\userAccount" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ryan Li\PycharmProjects\experienceBU\static" />
       <recent name="C:\Users\Ryan Li\PycharmProjects\experienceBU\organizations" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ryan Li\PycharmProjects\experienceBU\templates" />
+      <recent name="C:\Users\Ryan Li\PycharmProjects\experienceBU\userAccount" />
     </key>
   </component>
   <component name="RunManager" selected="Python.schedule (1)">
@@ -153,25 +155,25 @@
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588201495496" />
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1587964617397" />
-    <state width="1899" height="276" key="GridCell.Tab.0.bottom" timestamp="1588277886639">
+    <state width="1899" height="276" key="GridCell.Tab.0.bottom" timestamp="1588282255937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588277886639" />
+    <state width="1899" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588282255937" />
     <state width="1899" height="150" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
-    <state width="1899" height="276" key="GridCell.Tab.0.center" timestamp="1588277886639">
+    <state width="1899" height="276" key="GridCell.Tab.0.center" timestamp="1588282255937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588277886639" />
+    <state width="1899" height="276" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588282255937" />
     <state width="1899" height="150" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
-    <state width="1899" height="276" key="GridCell.Tab.0.left" timestamp="1588277886639">
+    <state width="1899" height="276" key="GridCell.Tab.0.left" timestamp="1588282255937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588277886639" />
+    <state width="1899" height="276" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588282255937" />
     <state width="1899" height="150" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
-    <state width="1899" height="276" key="GridCell.Tab.0.right" timestamp="1588277886639">
+    <state width="1899" height="276" key="GridCell.Tab.0.right" timestamp="1588282255937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1899" height="276" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588277886639" />
+    <state width="1899" height="276" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.7.1920.1080@0.0.1920.1080" timestamp="1588282255937" />
     <state width="1899" height="150" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1587964636405" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1587004183387">
       <screen x="0" y="0" width="1920" height="1080" />
