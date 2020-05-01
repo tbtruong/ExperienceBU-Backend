@@ -54,6 +54,7 @@ urlpatterns = [
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
     re_path(r'^api/profile/$', user_views.show_profiles),
+    re_path(r'^api/profile/(?P<pk>[0-9]+)$', user_views.show_specific),   
     re_path(r'^api/profile/update$', user_views.update_profile_view, name='update profile'),
     re_path(r'^api/profile/add_event/(?P<id>\d+)/$', user_views.rsvp_Events, name='event rsvp'),
     re_path(r'^api/profile/add_club/(?P<id>\d+)/$', user_views.subscribe, name='club subscribed'),

@@ -9,7 +9,7 @@
         "time": "Saturdays, 13:00-15:00 ",
         "location": "111 Cummington Mall, Room B26, Boston, MA",
         "contact": "bhim1210@bu.edu, ajames99@bu.edu",
-        "tags": "Science, Technology"       
+        "tags": "Technological"       
     }},{"model": "organizations.Club", "fields":
         {
             "id": 1,
@@ -19,9 +19,9 @@
             "requirements": "No Requirements",
             "eboard": "Jared Yellen, Caolan Disini",
             "time": "Weekly",
-            "location": "Unknown",
+            "location": "TBD",
             "contact": "yellen72@bu.edu, Cdisini@bu.edu",
-            "tags": "Science"       
+            "tags": "Recreational, Technological"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 2,
@@ -31,9 +31,9 @@
             "requirements": "None",
             "eboard": "(Annie Yang) Lin Xy, Lifu Zhang",
             "time": "Weekly",
-            "location": "Unknown",
+            "location": "TBD",
             "contact": "linxy@bu.edu, lifu@bu.edu",
-            "tags": "Culture"       
+            "tags": "Cultural"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 3,
@@ -45,7 +45,7 @@
             "time": "Thursdays",
             "location": "MCS Basement",
             "contact": "alisum@bu.edu, xruiz@bu.edu",
-            "tags": "Science, Technology"       
+            "tags": "Technologocal"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 4,
@@ -55,115 +55,119 @@
             "requirements": "Applications must be sent to  Boston University’s Rafik B. Hariri Institute for Computing and Computational Science and Engineering, BU Software Application and Innovation Lab (SAIL), and BU Spark!",
             "eboard": "Devin de Hueck, Julius Frost",
             "time": "Special Events",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "location": "N/A",
+            "contact": "N/A",
+            "tags": "Engineering, Technological"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 5,
-            "name": "",
+            "name": "Global App Initiative",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "Global App Initiative integrates humanity and technology to create a program that trains students to become mobile-app developers for nonprofits. Never losing sight of the bigger picture, we recruit students of all fashions and interests to work towards building a more economically, socially, and environmentally sound world.",
+            "requirements": "None",
+            "eboard": "Zach Bodi, Gagandeep Kang",
+            "time": "Biweekly",
+            "location": "Virtual",
+            "contact": "zachbodi@bu.edu, gskang@bu.edu",
+            "tags": "Technological, Community Service"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 6,
-            "name": "",
+            "name": "BU Drone Racing",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "Boston Drone Racing is a first-person view (FPV) UAV racing club founded in 2017 at Boston University. This club was initially created to find other pilots and expose others to this very addicting sport. The club is currently focused around racing in the tiny whoop and micro classes due to the limited space available to them in the city. ",
+            "requirements": "Have a drone",
+            "eboard": "Joshua Isak, Bassel El Mabsout",
+            "time": "Biweekly",
+            "location": "TBD",
+            "contact": "isakj@bu.edu, bmabsout@bu.edu",
+            "tags": "Technological, Engineering, Sports"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 7,
-            "name": "",
+            "name": "Girls Who Code",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "Girls Who Code holds community clubs for 6th-12th grade girls all over the country. Held at a local school, these clubs provide access to a computer science education that would otherwise be unattainable and undesirable. Girls Who Code clubs place an emphasis on sisterhood, focusing on project-based learning in applicable areas such as music, art, and machine learning. Clubs empower young girls and promote a network of future leaders. Clubs follow a curriculum provided by the Girls Who Code organization, they host guest speakers, and they go on field trips to expose students to the exciting world of technology beyond the classroom.",
+            "requirements": "None",
+            "eboard": "Michelle Lee, Samira Anant",
+            "time": "Biweekly",
+            "location": "TBD",
+            "contact": "mleex@bu.edu, sanant@bu.edu",
+            "tags": "Technological"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 8,
-            "name": "",
+            "name": "National Society of Black Engineers",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "BU NSBE incorporates a chapter mentor program as part of our participation in the NSBE Retention Program through which underclassmen and upperclassmen are paired. This interaction is important because the experience a student gains during their undergraduate career can be valuable to an entering freshman or an under-experienced sophomore. This sort of peer mentoring is beneficial; however, our chapter hopes to further benefit our membership by expanding our Mentor Program to past members of NSBE.",
+            "requirements": "N/A",
+            "eboard": "Mya Turner, Junia Janvier",
+            "time": "Biweekly",
+            "location": "Virtual",
+            "contact": "mjturner@bu.edu, jjanvier@bu.edu",
+            "tags": "Cultural, Technological, Engineering"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 9,
-            "name": "",
+            "name": "Open Web",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "Open Web is a student organization at Boston University that was founded in 2014 with the goal to bring highly motivated students together to work on apps and other tech projects. Open Web is an app incubator – a closed organization where students develop projects and apps in small but driven teams.",
+            "requirements": "N/A",
+            "eboard": "TBA",
+            "time": "TBD",
+            "location": "TBD",
+            "contact": "TBA",
+            "tags": "Technological, Engineering"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 10,
-            "name": "",
+            "name": "BU UPE",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "Upsilon Pi Epsilon (UPE) at BU is an honor society dedicated to promoting excellence in technical and, specifically, computing disciplines. UPE at BU will help prepare members for the professional world after college through professional training, developing concrete and soft skills, and working on meaningful and interesting projects, as well as, provide members with a supportive professional network.",
+            "requirements": "N/A",
+            "eboard": "Jorge Nario, Rudhra Raveendran",
+            "time": "Saturdays",
+            "location": "TBD",
+            "contact": "jmnario@bu.edu, rooday@bu.edu",
+            "tags": "Greek Life, Technological"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 11,
-            "name": "",
+            "name": "Women in Computer Science",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "The Women in Computer Science club at Boston University is designed to encourage women in computer science studies by providing a supportive community, informing members about national computing events, drawing a focus on women in technology, offering mentorship via study groups, social activities, networking opportunities and professional events.",
+            "requirements": "N/A",
+            "eboard": "Olivia Polos, Janice He",
+            "time": "TBD",
+            "location": "TBD",
+            "contact": "odp31@bu.edu, jkwhe@bu.edu",
+            "tags": "Technological"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 12,
-            "name": "",
+            "name": "Association for Computing Machinery",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "The Association for Computing Machinery is a nationally recognized organization that is dedicated to keeping computer scientists up-to-date and providing students with a multitude of learning and professional resources. Our BU chapter has some specific goals in mind:
+            -Incorporate new/prospective CS students into the BU CS community
+            -Provide workshops and resources to CS students that will introduce them to sub-fields of computer science
+            -Demonstrate how other fields/majors can be incorporated with computer science to create new and exciting projects (cross-denominational work)professional events.",
+            "requirements": "N/A",
+            "eboard": "Mona Jalal, Stephanie Yipchoy",
+            "time": "N/A",
+            "location": "N/A",
+            "contact": "syipchoy@bu.edu",
+            "tags": "Engineering, Technological"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 13,
-            "name": "",
+            "name": "BUHPC",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
-        }},]
+            "description": "The mission of BUHPC is to form an interdisciplinary team of motivated undergraduates who will compete at various international Student Cluster Competitions. Additionally they aim to motivate all students to learn about the applications and importance of HPC with as much in-depth technical and hands-on experience as possible. BUHPC finds that an undergraduate curriculum somewhat lacks in the ability to expose students to the realities of world around them. This club is out attempt at making our members true “Societal Engineers.”",
+            "requirements": "N/A",
+            "eboard": "Hung-Chin (Quentin) Lin, Benjamin Li",
+            "time": "TBD",
+            "location": "TBD",
+            "contact": "qlin@bu.edu, liben002@bu.edu",
+            "tags": "Engineering, Technological"       
+        }}
+]

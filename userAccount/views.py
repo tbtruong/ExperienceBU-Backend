@@ -155,25 +155,40 @@ def subscribe(request, id):
         return HttpResponseRedirect("http://localhost:3000/")
 
 
-# @login_required
+#@login_required
 @api_view(['GET', 'POST'])
 def show_profiles(request):
     # request_instance = Event.objects.create()
-
     if request.method == 'GET':
         data = models.Profile.objects.all()
-
         serializer = p_serializer.ProfileSerializer(data, context={'request': request}, many=True)
         print("request received! request received!")
         return Response(serializer.data)
-
     elif request.method == 'POST':
         serializer = p_serializer.ProfileSerializer(data=request.data)
-
         if serializer.is_valid():
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+@api_view(['GET', 'POST'])
+def show_specific(request,pk):
+    # request_instance = Event.objects.create()
+    if request.method == 'GET':
+        data = models.Profile.objects.filter(pk=pk)
+        serializer = p_serializer.ProfileSerializer(data, context={'request': request}, many=True)
+        return Response(serializer.data)
+    if request.method == 'POST':
+        print("ANSLDKJNASLKDJNSLAKJNDLKAJSNDLKJASNLKJ")
+        try:
+            page = models.Profile.objects.get(slug=slug)
+        except models.Profile.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        serializer = p_serializer.ProfileSerializer(page, data=request.data)
+        data = {}
+        if serializer.is_valid():
+            serializer.save()
+            return Response(data=data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 # @login_required

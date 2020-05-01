@@ -8,4 +8,4 @@ class ClubSerializer(serializers.ModelSerializer):
         # fields = (("eventID", "eventName", "content", "eventAffiliation", "eventType", "eventTags", "contact_info",
         #          "already_happened", "banner"))
         fields = (
-            "id", "name", "picture", "description", "requirements", "eboard", "time", "location", "contact", "tags")
+            "id", "name", "picture", "description", "requirements", "eboard", "time", "location", "contact", "tags", "subscribers")
