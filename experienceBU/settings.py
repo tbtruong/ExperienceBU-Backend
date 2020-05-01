@@ -12,6 +12,32 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import oauth2client
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
+
+# Use the client_secret.json file to identify the application requesting
+# authorization. The client ID (from that file) and access scopes are required.
+flow = google_auth_oauthlib.flow.Flow.from_client_secrets_file(
+    'client_secrets.json',
+    ['https://www.googleapis.com/auth/drive.metadata.readonly',
+     'https://www.googleapis.com/auth/calendar.events.readonly'])
+
+# Indicate where the API server will redirect the user after the user completes
+# the authorization flow. The redirect URI is required. The value must exactly
+# match one of the authorized redirect URIs for the OAuth 2.0 client, which you
+# configured in the API Console. If this value doesn't match an authorized URI,
+# you will get a 'redirect_uri_mismatch' error.
+flow.redirect_uri = 'http://127.0.0.1:8000/googlelogin/'
+
+# Generate URL for request to Google's OAuth 2.0 server.
+# Use kwargs to set optional request parameters.
+authorization_url, state = flow.authorization_url(
+    # Enable offline access so that you can refresh an access token without
+    # re-prompting the user for permission. Recommended for web server apps.
+    access_type='offline',
+    prompt='consent',
+    # Enable incremental authorization. Recommended as a best practice.
+    include_granted_scopes='true')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -46,6 +72,7 @@ INSTALLED_APPS = [
     'rest_framework_social_oauth2',
     'social_django',
     'rest_framework',
+    'rest_framework.authtoken',
     'django_filters',
     'corsheaders',
     'allauth',
@@ -59,9 +86,9 @@ REST_FRAMEWORK = {
     # 'DEFAULT_AUTHENTICATION_CLASSES': [
     #     'rest_framework_simplejwt.authentication.JWTAuthentication',
     # ],
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework.authentication.TokenAuthentication',
-    # ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
     # 'DEFAULT_PERMISSION_CLASSES': (
     #     'rest_framework.permissions.IsAuthenticated',
     # ),
@@ -107,9 +134,9 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
 )
 
-# for key in ['GOOGLE_OAUTH2_KEY',
-#             'GOOGLE_OAUTH2_SECRET', ]:
-#     exec("SOCIAL_AUTH_{key} = os.environ.get('{key}', '')".format(key=key))
+for key in ['GOOGLE_OAUTH2_KEY',
+            'GOOGLE_OAUTH2_SECRET', ]:
+    exec("SOCIAL_AUTH_{key} = os.environ.get('{key}', '')".format(key=key))
 
 WSGI_APPLICATION = 'experienceBU.wsgi.application'
 
@@ -189,11 +216,11 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/manage/'
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
-# SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile']
-#
-# SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
-#
-# SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
+SOCIAL_AUTH_GOOGLE_OAUTH2_SCOPE = ['email', 'profile']
+
+SOCIAL_AUTH_ADMIN_USER_SEARCH_FIELDS = ['username', 'first_name', 'email']
+
+SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "545236115133-92efvfr2i30dc8n3701jsoh4b7h7ftj3.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'v8EKwWZNcaFi_FVFrvNNiVzG'
@@ -209,18 +236,19 @@ GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = 'client_secrets.json'
 # LOGIN_URL = 'login'
 # LOGIN_URL = '/auth/login/google-oauth2/'
 
-LOGIN_REDIRECT_URL = 'http://localhost:3000/'
+# LOGIN_REDIRECT_URL = 'http://localhost:3000/'
+LOGIN_REDIRECT_URL = flow.redirect_uri
 LOGOUT_REDIRECT_URL = 'http://localhost:3000/'
 
-# SOCIAL_AUTH_PIPELINE = (
-#     'social_core.pipeline.social_auth.social_details',
-#     'social_core.pipeline.social_auth.social_uid',
-#     'social_core.pipeline.social_auth.auth_allowed',
-#     'social_core.pipeline.social_auth.social_user',
-#     'social_core.pipeline.user.get_username',
-#     'social_core.pipeline.social_auth.associate_by_email',  # <- this line not included by default
-#     'social_core.pipeline.user.create_user',
-#     'social_core.pipeline.social_auth.associate_user',
-#     'social_core.pipeline.social_auth.load_extra_data',
-#     'social_core.pipeline.user.user_details',
-# )
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    'social_core.pipeline.social_auth.associate_by_email',  # <- this line not included by default
+    'social_core.pipeline.user.create_user',
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)

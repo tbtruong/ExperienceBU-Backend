@@ -9,13 +9,14 @@ flow = InstalledAppFlow.from_client_secrets_file("credentials_new.json", scopes=
 
 credentials = flow.run_console()
 
-# pickle.dump(credentials, open("token.pkl", "wb"))
+pickle.dump(credentials, open("token.pkl", "wb"))
 
 credentials = pickle.load(open("token.pkl", "rb"))
-
+creedentials = pickle.load()
+credentials = "ya29.a0Ae4lvC0l9zNOYduT1MYLv7cyBIJPKjnwGTLPkeRCealknOlBrvugepda4I-kgw6iMeRUJsa-p6cpmb2Yzfi2pq8YKN6FooW7OfLreqYRRC9bZW6eJeeOmsWhKlo8AlEQJ3aD_vL_blScFkalEILaI1aPA7biMfIdqdQr"
 service = build("calendar", "v3", credentials=credentials)
 
-copied_code = "4/zAFCrKrt5DZg1Dp7zx6fxwqLazVQUQe-sYzR8TB4uEmHqLhSCPcQc8M"
+# copied_code = "4/zAFCrKrt5DZg1Dp7zx6fxwqLazVQUQe-sYzR8TB4uEmHqLhSCPcQc8M"
 
 result = service.calendarList().list().execute()
 print(credentials)

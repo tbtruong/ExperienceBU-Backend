@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from organizations.models import Club
-
+# from userAccount.models import User
 from PIL import Image
 
 
@@ -19,6 +19,7 @@ class Event(models.Model):
     tags = models.TextField(default="No Tags")
     contact = models.EmailField(verbose_name='email', max_length=60, default=False)
     connection = models.ForeignKey(to=Club, related_name='Events', on_delete=models.CASCADE, default=999)
+    followers = models.ManyToManyField(User, related_name='rsvp', blank=True)
 
     def save(self):
         super().save()
