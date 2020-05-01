@@ -124,9 +124,9 @@ def tokenretrieval(request):
     current_user = request.user
     # print(current_user.username)
 
-    # profile = models.Profile.objects.get(user=)
-    throwaway = SocialAccount.objects.get(user=2)
-    tokenA = SocialToken.objects.get(account=1)
+    profile = models.Profile.objects.get(user=current_user)
+    throwaway = SocialAccount.objects.get(user=current_user)
+    tokenA = SocialToken.objects.get(account=throwaway)
     # print(profile.first_name)
     # print(throwaway.uid)
     # print(tokenA.token)
