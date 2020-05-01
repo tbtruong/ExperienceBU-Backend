@@ -1,13 +1,169 @@
 [{"model": "organizations.Club", "fields":
     {
         "id": 0,
-        "name": "Habitat for Humanity",
+        "name": "0xBU",
         "picture": "https://drive.google.com/file/d/1C0jHqB_ygRo4HSe7o49xs1uNtvmT3kV5/view?usp=sharing",
-        "description": "Our Boston University Campus Chapter works with local affiliates in the Greater Boston area and with the larger Habitat for Humanity community in order to help fight the battle against the foreclosure crisis in Massachusetts. Founded in 1995, our chapter regularly holds build trips across the state, donating our time and labor during weekends in hopes of helping families desperate for affordable housing. Group meetings and various fundraisers are held throughout the school year as special programs are planned every semester to raise awareness of our cause. In addition, we annually send a group of twenty student volunteers to the South on a Collegiate Challenge program during the week of Spring Break.",
-        "requirements": "Anyone is welcome! Habitat for Humanity at Boston University continues to grow, and we're proud to offer a number of ways you can be involved in our chapter. Whether you choose to swing by a meeting, sign up for a build trip or donate, your concern and consideration is appreciated tremendously.",
-        "eboard": "President: John Batoha; Vice President: Lauren Harwood; Secretary: Meghan Downey; Treasurer: John Dixon; Fundraising Chair: Katie Durand; PR Chair: Pat Nelson; Trip Coordinator: Marshall Schurtz; Spring Break Coordinator: Lynn Lim; Webmaster: Kanta Sangchuntr",
-        "time": "Tuesdays, 17:00-18:00",
-        "location": "CAS Room 235",
-        "contact": "bu.habitatboston@gmail.com",
-        "tags": "Community Service"      
-    }}]
+        "description": "0xBU is a cybersecurity club and CTF competition team at Boston University. If you’re interested in exploring, and learning about the world of cyber security, then please drop by! No security background is necessary to participate, however a willingness to learn is. We meet regularly every Saturday from 1PM to 3PM in 111 Cummington Mall, Room B26, Boston, MA 02215 (BUILDS room).",
+        "requirements": "Anyone can join!",
+        "eboard": "Brandon Im, Andrew James",
+        "time": "Saturdays, 13:00-15:00 ",
+        "location": "111 Cummington Mall, Room B26, Boston, MA",
+        "contact": "bhim1210@bu.edu, ajames99@bu.edu",
+        "tags": "Science, Technology"       
+    }},{"model": "organizations.Club", "fields":
+        {
+            "id": 1,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 2,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 3,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 4,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 5,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 6,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 7,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 8,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 9,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 10,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 11,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 12,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},{"model": "organizations.Club", "fields":
+        {
+            "id": 13,
+            "name": "",
+            "picture": "",
+            "description": "",
+            "requirements": "",
+            "eboard": "",
+            "time": "",
+            "location": "",
+            "contact": "",
+            "tags": ""       
+        }},]
