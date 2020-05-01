@@ -35,8 +35,8 @@ from rest_framework.routers import DefaultRouter
 
 
 urlpatterns = [
-    path('register/', user_views.register, name='register'),
-    path('profile/', user_views.profile, name='profile'),
+    # path('register/', user_views.register, name='register'),
+    # path('profile/', user_views.profile, name='profile'),
     path('login/', auth_views.LoginView.as_view(template_name='userAccount/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='userAccount/logout.html'), name='logout'),
     path('admin/', admin.site.urls),
@@ -44,7 +44,8 @@ urlpatterns = [
     path('googlelogin/', TemplateView.as_view(template_name='userAccount/googlelogin.html')),
     # path('google/', user_views.GoogleView.as_view(), name='google'),
     path('tokenretrieval/', user_views.tokenretrieval, name='tokenretrieval'),
-    path('exchange/', user_views.exchange_token, name='tokenexchange'),
+    path('exchange/', user_views.ExampleView, name='received data'),
+    path('exchange1/', user_views.exchange_token, name='tokenexchange'),
     # url(r'^gmailAuthenticate', user_views.gmail_authenticate, name='gmail_authenticate'),
     # url(r'^oauth2callback', user_views.auth_return),
     # url(r'^$', user_views.home, name='home'),
@@ -58,6 +59,8 @@ urlpatterns = [
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.club_info),
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
     re_path(r'^api/profile/$', user_views.show_profiles),
+    re_path(r'^api/profile/update$', user_views.update_profile_view, name='update profile'),
+    url(r'^users/register', user_views.create_auth),
     # url(r'auth-social/', include('social_django.urls', namespace='social'),
     #    TemplateView.as_view(template_name='userAccount/googlelogin.html'))
 

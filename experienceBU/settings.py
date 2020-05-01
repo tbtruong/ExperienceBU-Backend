@@ -88,7 +88,9 @@ REST_FRAMEWORK = {
     # ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-    ),
+    ),'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ],
     # 'DEFAULT_PERMISSION_CLASSES': (
     #     'rest_framework.permissions.IsAuthenticated',
     # ),
@@ -236,8 +238,8 @@ GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = 'client_secrets.json'
 # LOGIN_URL = 'login'
 # LOGIN_URL = '/auth/login/google-oauth2/'
 
-# LOGIN_REDIRECT_URL = 'http://localhost:3000/'
-LOGIN_REDIRECT_URL = flow.redirect_uri
+LOGIN_REDIRECT_URL = 'http://localhost:3000/'
+#LOGIN_REDIRECT_URL = flow.redirect_uri
 LOGOUT_REDIRECT_URL = 'http://localhost:3000/'
 
 SOCIAL_AUTH_PIPELINE = (
