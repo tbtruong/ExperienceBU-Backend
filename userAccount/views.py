@@ -22,6 +22,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from social_django.utils import psa
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 @api_view(['PUT', ])
@@ -133,10 +134,25 @@ def tokenretrieval(request):
 
 
 @api_view(['GET', 'POST'])
-def rsvp_Events(request, id, slug):
+def rsvp_Events(request, id):
     if request.method == 'POST':
-        event = get_object_or_404(Event, id=id, slug=slug)
-        # if event.followers.filter(id=request.user.id)
+        event = get_object_or_404(Event, id=id)
+        if event.followers.filter(id=request.user.id).exists():
+            event.followers.remove(request.user)
+        else:
+            event.followers.add(request.user)
+        return HttpResponseRedirect("http://localhost:3000/")
+
+
+@api_view(['GET', 'POST'])
+def subscribe(request, id):
+    if request.method == 'POST':
+        club = get_object_or_404(Club, id=id)
+        if club.subscribers.filter(id=request.user.id).exists():
+            club.subscribers.remove(request.user)
+        else:
+            club.subscribers.add(request.user)
+        return HttpResponseRedirect("http://localhost:3000/")
 
 
 # @login_required

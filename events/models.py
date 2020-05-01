@@ -19,7 +19,7 @@ class Event(models.Model):
     tags = models.TextField(default="No Tags")
     contact = models.EmailField(verbose_name='email', max_length=60, default=False)
     connection = models.ForeignKey(to=Club, related_name='Events', on_delete=models.CASCADE, default=999)
-    followers = models.ManyToManyField(User, related_name='rsvp', blank=True)
+    followers = models.ManyToManyField('userAccount.Profile', related_name='rsvp', blank=True)
 
     def save(self):
         super().save()
