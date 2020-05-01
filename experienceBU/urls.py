@@ -43,6 +43,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('googlelogin/', TemplateView.as_view(template_name='userAccount/googlelogin.html')),
     path('google/', user_views.GoogleView.as_view(), name='google'),
+    path('tokenretrieval/',user_views.tokenretrieval,name='tokenretrieval'),
     # url(r'^gmailAuthenticate', user_views.gmail_authenticate, name='gmail_authenticate'),
     # url(r'^oauth2callback', user_views.auth_return),
     # url(r'^$', user_views.home, name='home'),

@@ -10,20 +10,36 @@ from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User, BaseUserManager
 from django.contrib.auth.hashers import make_password
-from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp
+from allauth.socialaccount import providers
+from allauth.socialaccount.helpers import complete_social_login
+from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp, SocialAccount
 from allauth.socialaccount.providers.google.views import oauth2_login
 from allauth.socialaccount.helpers import complete_social_login
 from . import models
 from . import serializers as p_serializer
 from experienceBU import settings
 import requests, json
+import allauth.account
 from requests.exceptions import HTTPError
 
 from social_django.utils import psa
 
-def calendar(request):
-    access_token = SocialToken.objects.get()
 
+# test = Profile.objects.values('user')[1]['user']
+# profile = models.Profile.objects.get(user=request.user)
+# @api_view(['GET', 'POST'])
+
+def tokenretrieval(request):
+    current_user = request.user
+    print(current_user.username)
+
+    # profile = models.Profile.objects.get(user=)
+    throwaway = SocialAccount.objects.get(user=current_user)
+    tokenA = SocialToken.objects.get(account=throwaway)
+    print(profile.first_name)
+    print(throwaway.uid)
+    print(tokenA.token)
+    return Response(tokenA.token)
 
 
 def register(request):
@@ -82,7 +98,7 @@ def show_profiles(request):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = p_serializer .ProfileSerializer(data=request.data)
+        serializer = p_serializer.ProfileSerializer(data=request.data)
 
         if serializer.is_valid():
             serializer.save()
