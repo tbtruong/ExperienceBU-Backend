@@ -15,10 +15,10 @@ from oauth2client.contrib.django_util.models import CredentialsField
 
 
 class Profile(models.Model):
-    id = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE)
-    #user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # id = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     email = models.EmailField(verbose_name="email", max_length=60, default=False)
-    #credentials = CredentialsField()
+    # credentials = CredentialsField()
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)

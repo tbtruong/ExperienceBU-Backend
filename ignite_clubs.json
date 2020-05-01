@@ -13,46 +13,46 @@
     }},{"model": "organizations.Club", "fields":
         {
             "id": 1,
-            "name": "",
+            "name": "BU AR/VR",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "BU AR/VR is a student-run organization dedicated to introducing augmented reality and virtual reality technologies to the community around us. We aim to foster an enthusiastic atmosphere and bring in industrial resources to the Boston University campus. It’s a brand new initiative for students to gain recognition among bigger technology communities in Boston built upon intellectual interest in the cutting-edge AR/VR field.",
+            "requirements": "No Requirements",
+            "eboard": "Jared Yellen, Caolan Disini",
+            "time": "Weekly",
+            "location": "Unknown",
+            "contact": "yellen72@bu.edu, Cdisini@bu.edu",
+            "tags": "Science"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 2,
-            "name": "",
+            "name": "BU Chinese Students and Scholars Association",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "BUCSSA is a nonprofit, student-ran organization at Boston University. The focus of the organization is to promote academic and cultural exchanges amongst Chinese students/scholars and with other communities/different cultures too. We hope to enhance the communication, interaction, understanding and friendship within the BU Chinese community, while also providing valuable work experience to our members.",
+            "requirements": "None",
+            "eboard": "(Annie Yang) Lin Xy, Lifu Zhang",
+            "time": "Weekly",
+            "location": "Unknown",
+            "contact": "linxy@bu.edu, lifu@bu.edu",
+            "tags": "Culture"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 3,
-            "name": "",
+            "name": "BUILDS",
             "picture": "",
-            "description": "",
-            "requirements": "",
-            "eboard": "",
-            "time": "",
-            "location": "",
-            "contact": "",
-            "tags": ""       
+            "description": "BUILDS is a student-run hackerspace that provides BU students with all the tools and resources for leading collaborative student tech projects. We take the dirt and grit of the world and give it a shine. We’re not led by a single purpose or mission, but we work on projects that are truly interesting to us. We’re a self-motivated, skillful bunch who do what we love because we love it!",
+            "requirements": "None",
+            "eboard": "Sumara Ali, Xavier Ruiz",
+            "time": "Thursdays",
+            "location": "MCS Basement",
+            "contact": "alisum@bu.edu, xruiz@bu.edu",
+            "tags": "Science, Technology"       
         }},{"model": "organizations.Club", "fields":
         {
             "id": 4,
-            "name": "",
+            "name": "BU MIC",
             "picture": "",
-            "description": "",
-            "requirements": "",
+            "description": "Boston University Machine Intelligence Community is an organization focused on providing opportunities for undergraduate and graduate students to learn about machine intelligence in a community environment. As a brief history, MIC was founded as a research paper discussion group at MIT in 2016 after being inspired by the AlphaGo versus Lee Sedol match, and was brought to BU in April 2017. We are a student-led research group sponsored by Boston University’s Rafik B. Hariri Institute for Computing and Computational Science and Engineering, BU Software Application and Innovation Lab (SAIL), and BU Spark!",
+            "requirements": "Applications must be sent to  Boston University’s Rafik B. Hariri Institute for Computing and Computational Science and Engineering, BU Software Application and Innovation Lab (SAIL), and BU Spark!",
             "eboard": "",
             "time": "",
             "location": "",

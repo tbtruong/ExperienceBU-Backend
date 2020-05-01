@@ -3,9 +3,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from rest_framework import viewsets, status, generics
-from rest_framework.authtoken.models import Token
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -13,6 +10,9 @@ from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User, BaseUserManager
 from django.contrib.auth.hashers import make_password
+from allauth.socialaccount.models import SocialLogin, SocialToken, SocialApp
+from allauth.socialaccount.providers.google.views import oauth2_login
+from allauth.socialaccount.helpers import complete_social_login
 from . import models
 from . import serializers as p_serializer
 from experienceBU import settings
@@ -20,6 +20,9 @@ import requests, json
 from requests.exceptions import HTTPError
 
 from social_django.utils import psa
+
+def calendar(request):
+    access_token = SocialToken.objects.get()
 
 
 
