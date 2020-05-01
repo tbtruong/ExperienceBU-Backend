@@ -44,12 +44,10 @@ urlpatterns = [
     path('googlelogin/', TemplateView.as_view(template_name='userAccount/googlelogin.html')),
     # path('google/', user_views.GoogleView.as_view(), name='google'),
     path('tokenretrieval/', user_views.tokenretrieval, name='tokenretrieval'),
-    path('exchange/', user_views.ExampleView, name='received data'),
-    path('exchange1/', user_views.exchange_token, name='tokenexchange'),
+    # path('exchange1/', user_views.exchange_token, name='tokenexchange'),
+    path('logout/', auth_views.LogoutView.as_view(next_page=settings.LOGOUT_REDIRECT_URL), name='logout'),
     # url(r'^gmailAuthenticate', user_views.gmail_authenticate, name='gmail_authenticate'),
-    # url(r'^oauth2callback', user_views.auth_return),
     # url(r'^$', user_views.home, name='home'),
-    # url('', include('social_django.urls', namespace='social')),
     re_path(r'^auth/', include('rest_framework_social_oauth2.urls')),
     re_path(r'^api/events/$', event_views.show_events),
     re_path(r'^api/events/(?P<pk>[0-9]+)/$', event_views.event_info),
@@ -60,9 +58,7 @@ urlpatterns = [
     re_path(r'^api/organizations/(?P<pk>[0-9]+)/$', club_views.clubs_detail),
     re_path(r'^api/profile/$', user_views.show_profiles),
     re_path(r'^api/profile/update$', user_views.update_profile_view, name='update profile'),
-    url(r'^users/register', user_views.create_auth),
     # url(r'auth-social/', include('social_django.urls', namespace='social'),
-    #    TemplateView.as_view(template_name='userAccount/googlelogin.html'))
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
