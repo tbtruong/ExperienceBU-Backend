@@ -197,8 +197,8 @@ GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = 'client_secrets.json'
 # LOGIN_URL = 'login'
 # LOGIN_URL = '/auth/login/google-oauth2/'
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'http://localhost:3000/'
+LOGOUT_REDIRECT_URL = 'http://localhost:3000/'
 
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',

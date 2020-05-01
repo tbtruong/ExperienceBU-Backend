@@ -1,0 +1,13 @@
+[{"model": "organizations.Club", "fields":
+    {
+        "id": 0,
+        "name": "Habitat for Humanity",
+        "picture": "https://drive.google.com/file/d/1C0jHqB_ygRo4HSe7o49xs1uNtvmT3kV5/view?usp=sharing",
+        "description": "Our Boston University Campus Chapter works with local affiliates in the Greater Boston area and with the larger Habitat for Humanity community in order to help fight the battle against the foreclosure crisis in Massachusetts. Founded in 1995, our chapter regularly holds build trips across the state, donating our time and labor during weekends in hopes of helping families desperate for affordable housing. Group meetings and various fundraisers are held throughout the school year as special programs are planned every semester to raise awareness of our cause. In addition, we annually send a group of twenty student volunteers to the South on a Collegiate Challenge program during the week of Spring Break.",
+        "requirements": "Anyone is welcome! Habitat for Humanity at Boston University continues to grow, and we're proud to offer a number of ways you can be involved in our chapter. Whether you choose to swing by a meeting, sign up for a build trip or donate, your concern and consideration is appreciated tremendously.",
+        "eboard": "President: John Batoha; Vice President: Lauren Harwood; Secretary: Meghan Downey; Treasurer: John Dixon; Fundraising Chair: Katie Durand; PR Chair: Pat Nelson; Trip Coordinator: Marshall Schurtz; Spring Break Coordinator: Lynn Lim; Webmaster: Kanta Sangchuntr",
+        "time": "Tuesdays, 17:00-18:00",
+        "location": "CAS Room 235",
+        "contact": "bu.habitatboston@gmail.com",
+        "tags": "Community Service"      
+    }}]

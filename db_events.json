@@ -12,7 +12,7 @@
             "type": "Club Activities",
             "tags": "Community Service",
             "contact": "bu.habitatboston@gmail.com",
-            "affiliation_id": 0      
+            "connection": 0      
         }
     },
         {"model": "events.Event", "fields":{
@@ -27,7 +27,7 @@
             "type": "Club Activities",
             "tags": "Music",
             "contact": "mbceboard@gmail.com" ,
-            "affiliation_id": 2     
+            "connection": 2     
         }
     },
         {"model": "events.Event",  "fields":{
@@ -42,7 +42,7 @@
             "type": "Performances",
             "tags": "Performance Arts - Music",
             "contact": "fusion@bu.edu",
-            "affiliation_id": 3       
+            "connection": 3       
         }
     },
         {"model": "events.Event",  "fields":{
@@ -57,7 +57,7 @@
             "type": "Club Activities",
             "tags": "Academic & Professional - Others, Media Arts",
             "contact": "boston.university.adclub@gmail.com",
-            "affiliation_id": 4      
+            "connection": 4      
         }},
         {"model": "events.Event", "fields":{
             "id": 4,
@@ -71,7 +71,7 @@
             "type": "Others",
             "tags": "Media Arts",
             "contact": "comugrad@bu.edu",
-            "affiliation_id": 1      
+            "connection": 1      
         }
     },{"model": "events.Event", "fields":{
         "id": 5,
@@ -85,7 +85,7 @@
         "type": "Others",
         "tags": "Media Arts",
         "contact": "comugrad@bu.edu",
-        "affiliation_id": 1      
+        "connection": 1      
     }
 },  {"model": "events.Event",  "fields":{
     "id": 6,
@@ -99,7 +99,7 @@
     "type": "Performances",
     "tags": "Performance Arts - Music",
     "contact": "fusion@bu.edu",
-    "affiliation_id": 3      
+    "connection": 3      
 }
 }
     
